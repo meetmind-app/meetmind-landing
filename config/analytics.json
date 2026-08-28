@@ -1,9 +1,0 @@
-{
-  "enabled": false,
-  "debug": true,
-  "providers": {
-    "ga4": { "enabled": false, "measurementId": "" },
-    "clarity": { "enabled": false, "projectId": "" },
-    "customEndpoint": { "enabled": false, "url": "" }
-  }
-}
