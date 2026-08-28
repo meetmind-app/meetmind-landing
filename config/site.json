@@ -1,0 +1,133 @@
+{
+  "siteName": "MeetMind AI",
+  "siteUrl": "https://meetmind-app.github.io/meetmind-landing",
+  "telegramBotUrl": "https://t.me/meetmind_app_bot",
+  "defaultLocale": "en",
+  "editorialMasterLocale": "ru",
+  "rtlLocales": [
+    "ar",
+    "fa"
+  ],
+  "plannedLocales": [
+    {
+      "code": "en",
+      "label": "English",
+      "ready": true,
+      "flag": "🇬🇧"
+    },
+    {
+      "code": "ru",
+      "label": "Русский",
+      "ready": true,
+      "flag": "🇷🇺"
+    },
+    {
+      "code": "de",
+      "label": "Deutsch",
+      "ready": true,
+      "flag": "🇩🇪"
+    },
+    {
+      "code": "es",
+      "label": "Español",
+      "ready": true,
+      "flag": "🇪🇸"
+    },
+    {
+      "code": "pt-BR",
+      "label": "Português (Brasil)",
+      "ready": true,
+      "flag": "🇧🇷"
+    },
+    {
+      "code": "fr",
+      "label": "Français",
+      "ready": true,
+      "flag": "🇫🇷"
+    },
+    {
+      "code": "it",
+      "label": "Italiano",
+      "ready": true,
+      "flag": "🇮🇹"
+    },
+    {
+      "code": "tr",
+      "label": "Türkçe",
+      "ready": true,
+      "flag": "🇹🇷"
+    },
+    {
+      "code": "id",
+      "label": "Bahasa Indonesia",
+      "ready": true,
+      "flag": "🇮🇩"
+    },
+    {
+      "code": "vi",
+      "label": "Tiếng Việt",
+      "ready": true,
+      "flag": "🇻🇳"
+    },
+    {
+      "code": "ms",
+      "label": "Bahasa Melayu",
+      "ready": true,
+      "flag": "🇲🇾"
+    },
+    {
+      "code": "fil",
+      "label": "Filipino",
+      "ready": true,
+      "flag": "🇵🇭"
+    },
+    {
+      "code": "pl",
+      "label": "Polski",
+      "ready": true,
+      "flag": "🇵🇱"
+    },
+    {
+      "code": "ro",
+      "label": "Română",
+      "ready": true,
+      "flag": "🇷🇴"
+    },
+    {
+      "code": "nl",
+      "label": "Nederlands",
+      "ready": true,
+      "flag": "🇳🇱"
+    },
+    {
+      "code": "hi",
+      "label": "हिन्दी",
+      "ready": true,
+      "flag": "🇮🇳"
+    },
+    {
+      "code": "zh-CN",
+      "label": "简体中文",
+      "flag": "🇨🇳",
+      "ready": true
+    },
+    {
+      "code": "ar",
+      "label": "العربية",
+      "ready": true,
+      "flag": "🇸🇦"
+    },
+    {
+      "code": "uz",
+      "label": "O‘zbek",
+      "ready": true,
+      "flag": "🇺🇿"
+    },
+    {
+      "code": "fa",
+      "label": "فارسی",
+      "ready": true,
+      "flag": "🇮🇷"
+    }
+  ]
+}
