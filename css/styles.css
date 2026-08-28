@@ -485,3 +485,47 @@ body:not(.keyboard-nav) .skip-link:focus{
   .footer-col h3{font-size:12px}
   .footer-col a,.resource-pending{font-size:12px}
 }
+
+
+/* =========================================================
+   v2.6 FINAL — ultra-compact language dropdown
+   ========================================================= */
+.language-menu{
+  width:248px;
+  max-height:min(520px,78vh);
+  padding:5px;
+  gap:0;
+}
+.language-menu > a,
+.language-menu > span{
+  min-height:30px;
+  padding:4px 8px;
+  border-radius:8px;
+  font-size:13px;
+}
+.language-menu .language-option{
+  min-height:20px;
+  gap:8px;
+  line-height:1.05;
+}
+.language-menu .language-flag{
+  width:18px;
+  flex:0 0 18px;
+}
+.language-menu small{
+  font-size:9px;
+  line-height:1;
+}
+@media(max-width:760px){
+  .language-menu{
+    width:min(248px,calc(100vw - 24px));
+    max-height:min(500px,76vh);
+    padding:4px;
+  }
+  .language-menu > a,
+  .language-menu > span{
+    min-height:29px;
+    padding:4px 7px;
+    font-size:12.5px;
+  }
+}
