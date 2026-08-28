@@ -529,3 +529,11 @@ body:not(.keyboard-nav) .skip-link:focus{
     font-size:12.5px;
   }
 }
+
+
+/* v2.7 localization / RTL */
+html[dir="rtl"] body{text-align:right}
+html[dir="rtl"] .hero-stage,
+html[dir="rtl"] .output-visual,
+html[dir="rtl"] .demo-frame{direction:ltr}
+html[dir="rtl"] .language-menu{direction:rtl}
