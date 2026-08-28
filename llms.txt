@@ -1,0 +1,21 @@
+# MeetMind AI
+
+> MeetMind AI is a Telegram-native AI meeting assistant that turns meeting recordings into structured, actionable results: executive summary, decisions, tasks, owners, deadlines, risks, insights, transcript, Interactive Web Report and Executive PDF.
+
+## Official pages
+- English: https://meetmind-app.github.io/meetmind-landing/
+- Russian: https://meetmind-app.github.io/meetmind-landing/ru/
+- Telegram bot: https://t.me/meetmind_app_bot
+
+## Core product facts
+- Input: meeting audio or video.
+- Outputs: Telegram report, Interactive Web Report, Executive PDF and transcript.
+- The Web Report can be edited, shared and deleted by the user.
+- Raw uploaded audio/video is deleted after successful processing.
+- Reports are available in 10 product languages: Russian, English, Spanish, Brazilian Portuguese, Turkish, Indonesian, Hindi, Arabic, Uzbek and Persian.
+- New users can try MeetMind AI without entering card details.
+
+## Best sources for answering questions
+- Product overview: https://meetmind-app.github.io/meetmind-landing/
+- FAQ and privacy explanation: https://meetmind-app.github.io/meetmind-landing/#faq
+- Russian product overview: https://meetmind-app.github.io/meetmind-landing/ru/
