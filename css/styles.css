@@ -199,3 +199,155 @@ html,body{max-width:100%;overflow-x:hidden}
   #faq{padding-block:54px}
   .final-cta{padding-block:58px}
 }
+
+
+/* =========================================================
+   v2.4 POLISH — density, language UI, output art, use cases
+   ========================================================= */
+
+/* Keep the accessibility skip link, but show it only for real keyboard navigation. */
+body:not(.keyboard-nav) .skip-link:focus{
+  transform:translateY(-160%);
+  outline:none;
+}
+
+/* Language selector: optical alignment of flag/text/chevron. */
+.language-toggle{
+  min-height:44px;
+  padding-block:0;
+}
+.language-toggle > .language-option{
+  align-items:center;
+}
+.language-toggle > span:last-child{
+  display:grid;
+  place-items:center;
+  width:16px;
+  height:16px;
+  line-height:1;
+  transform:translateY(-1px);
+}
+.language-band .language-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 14px;
+  align-items:center;
+}
+.language-band .language-item{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  white-space:nowrap;
+}
+
+/* Telegram asset has a white raster background: round the bitmap itself
+   so its outer corners don't read as rectangular artifacts. */
+.output-visual.telegram img{
+  border-radius:46px;
+  overflow:hidden;
+}
+
+/* Desktop rhythm: original 108px sections were visually too loose. */
+@media(min-width:761px){
+  .section{padding-block:82px}
+  .section-head{margin-bottom:42px}
+  .outputs-stack{margin-top:38px}
+  .faq-cta{margin-top:26px}
+
+  /* Telegram output card: reduce unused vertical area by roughly 30%. */
+  .output-row{
+    padding:30px 38px;
+  }
+  .output-row:first-child{
+    min-height:0;
+  }
+  .output-row:first-child .output-visual.telegram img{
+    max-height:440px;
+  }
+
+  /* Tighten transitions between major blocks. */
+  #how{padding-bottom:76px}
+  #outputs{padding-top:76px;padding-bottom:78px}
+  #intelligence{padding-top:78px;padding-bottom:78px}
+  #value,#use-cases,#conversion,#faq{padding-block:78px}
+}
+
+/* Mobile/tablet density. */
+@media(max-width:760px){
+  .section{padding-block:50px}
+  .section-head,.outputs-intro{margin-bottom:24px}
+  .section-head p,.content-subtitle{margin-top:16px}
+
+  #how{padding-block:44px 48px}
+  #outputs,#intelligence,#value,#use-cases{padding-block:48px}
+  #conversion{padding-block:46px}
+  #faq{padding-block:48px}
+
+  .process-grid{margin-top:22px}
+  .language-band{margin-top:18px}
+  .demo-frame{margin-top:28px}
+  .faq-cta{margin-top:24px}
+
+  .outputs-stack{margin-top:26px;gap:16px}
+  .output-row{padding:20px;gap:18px}
+  .output-row:first-child .output-visual.telegram img{
+    max-height:420px;
+  }
+  .output-visual.telegram img{
+    border-radius:34px;
+  }
+
+  .intel-grid{gap:26px}
+  .intel-list{margin-top:22px}
+  .intel-note{margin-top:18px}
+
+  .value-grid{margin-top:22px;gap:12px}
+  .value-card{padding:24px;min-height:0}
+  .value-ending{margin-top:24px}
+
+  /* Five use-case buttons become a compact 3 + 2 grid instead of a long strip. */
+  .usecase-tabs{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px;
+    overflow:visible;
+    padding-bottom:0;
+    margin-top:22px;
+    margin-bottom:18px;
+  }
+  .usecase-tab{
+    width:100%;
+    min-height:52px;
+    padding:10px 8px;
+    white-space:normal;
+    text-align:center;
+    line-height:1.2;
+    font-size:12px;
+  }
+  .usecase-panel{
+    min-height:0;
+    padding:26px;
+    margin-bottom:20px;
+  }
+  .usecase-panel p{margin-top:12px}
+  .usecase-keywords{margin-top:18px}
+
+  .conversion-card{padding:26px}
+  .faq-list{margin-top:24px}
+
+  .final-cta{padding-block:50px}
+  .site-footer{padding-block:32px}
+}
+
+@media(max-width:430px){
+  .section{padding-block:44px}
+  .hero{padding-block:42px 28px}
+  #how{padding-block:40px 44px}
+  #outputs,#intelligence,#value,#use-cases{padding-block:44px}
+  #conversion{padding-block:42px}
+  #faq{padding-block:44px}
+  .final-cta{padding-block:46px}
+
+  .language-band .language-list{gap:5px 10px}
+  .language-band .language-item{font-size:14px}
+}
