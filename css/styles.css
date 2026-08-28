@@ -351,3 +351,137 @@ body:not(.keyboard-nav) .skip-link:focus{
   .language-band .language-list{gap:5px 10px}
   .language-band .language-item{font-size:14px}
 }
+
+
+/* =========================================================
+   v2.5 COMPACT POLISH
+   ========================================================= */
+
+/* 1) Language dropdown: compact rows instead of tall stretched cells. */
+.language-menu{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+  max-height:min(430px,68vh);
+  padding:6px;
+}
+.language-menu[hidden]{display:none}
+.language-menu > a,
+.language-menu > span{
+  flex:0 0 auto;
+  min-height:38px;
+  padding:7px 10px;
+  line-height:1.2;
+}
+.language-menu .language-option{
+  min-height:24px;
+  align-items:center;
+}
+
+/* 2) Language band: keep flags, restore middle-dot separators. */
+.language-band .language-list{
+  gap:5px 8px;
+}
+.language-band .language-item{
+  gap:5px;
+}
+.language-band .language-item:not(:last-child)::after{
+  content:"·";
+  margin-inline-start:3px;
+  color:#94a3b8;
+  font-weight:700;
+}
+
+/* 3) Remove the oversized empty opening above hero content. */
+.hero{
+  padding-block:34px 62px;
+}
+.hero-copy{
+  padding-block:0;
+}
+
+/* 4) Desktop value cards: same compact feel as mobile. */
+@media(min-width:761px){
+  .value-card{
+    min-height:148px;
+    padding:24px 30px;
+  }
+  .value-card p{
+    margin-top:10px;
+  }
+  .value-grid{
+    gap:16px;
+  }
+
+  /* Continue tightening transitions between sections. */
+  .section{padding-block:70px}
+  #how{padding-block:66px 68px}
+  #outputs,#intelligence,#value,#use-cases,#conversion,#faq{
+    padding-block:68px;
+  }
+}
+
+/* 5) Mobile header: language + burger are anchored to the right. */
+@media(max-width:760px){
+  .header-inner{
+    gap:10px;
+  }
+  .header-actions{
+    margin-inline-start:auto;
+    gap:6px;
+  }
+  .language-toggle{
+    min-height:42px;
+  }
+  .mobile-menu-button{
+    margin-inline-start:2px;
+    flex:0 0 auto;
+  }
+
+  /* Less empty space immediately after the sticky header. */
+  .hero{
+    padding-block:24px 34px;
+  }
+  .hero-copy{
+    padding-block:0;
+  }
+
+  /* Keep the language dropdown compact on phones as well. */
+  .language-menu{
+    max-height:min(390px,62vh);
+  }
+  .language-menu > a,
+  .language-menu > span{
+    min-height:36px;
+    padding:6px 9px;
+  }
+
+  /* Footer: brand across full width, Product + Documents in two columns. */
+  .footer-grid{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:26px 18px;
+  }
+  .footer-brand{
+    grid-column:1 / -1;
+  }
+  .footer-col{
+    min-width:0;
+  }
+  .footer-col a,
+  .resource-pending{
+    font-size:13px;
+  }
+  .footer-bottom{
+    margin-top:28px;
+    padding-top:18px;
+  }
+}
+
+@media(max-width:430px){
+  .hero{padding-block:20px 30px}
+  .site-footer{padding-block:28px}
+  .footer-grid{gap:22px 14px}
+  .footer-col h3{font-size:12px}
+  .footer-col a,.resource-pending{font-size:12px}
+}
