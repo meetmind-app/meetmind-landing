@@ -537,3 +537,17 @@ html[dir="rtl"] .hero-stage,
 html[dir="rtl"] .output-visual,
 html[dir="rtl"] .demo-frame{direction:ltr}
 html[dir="rtl"] .language-menu{direction:rtl}
+
+
+/* v2.8 FINAL LANGUAGE MENU FIX */
+.language-menu{width:270px!important;max-height:min(590px,calc(100vh - 96px))!important;overflow-y:auto!important;padding:5px!important;display:flex!important;flex-direction:column!important;gap:1px!important;direction:ltr!important}
+.language-menu[hidden]{display:none!important}
+.language-menu span,.language-menu .language-option,.language-menu .language-option>span,.language-menu .language-flag,.language-menu .language-label{padding:0!important;margin:0!important;min-height:0!important;border-radius:0!important}
+.language-menu>a{display:flex!important;align-items:center!important;justify-content:flex-start!important;width:100%!important;height:29px!important;min-height:29px!important;padding:3px 8px!important;border-radius:8px!important;font-size:13px!important;line-height:1!important;color:#334155!important;direction:ltr!important}
+.language-menu>a:hover{background:#f5f7fb!important}.language-menu>a[aria-current="page"]{background:#f3f6fb!important;color:#0f172a!important;font-weight:750!important}
+.language-menu .language-option{display:grid!important;grid-template-columns:22px minmax(0,1fr)!important;align-items:center!important;column-gap:9px!important;width:100%!important}
+.language-menu .language-flag{display:block!important;width:22px!important;text-align:left!important;font-size:15px!important;line-height:1!important}
+.language-menu .language-label{display:block!important;width:100%!important;text-align:left!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;font-size:13px!important;line-height:1.1!important}
+.language-menu a[data-locale="ar"] .language-label,.language-menu a[data-locale="fa"] .language-label{direction:rtl!important;unicode-bidi:plaintext!important;text-align:left!important}
+html[dir="rtl"] .language-toggle{direction:rtl}html[dir="rtl"] .language-menu{direction:ltr!important}
+@media(max-width:760px){.language-menu{width:min(260px,calc(100vw - 24px))!important;max-height:min(570px,calc(100vh - 86px))!important}.language-menu>a{height:28px!important;min-height:28px!important;padding:3px 7px!important;font-size:12.5px!important}.language-menu .language-label{font-size:12.5px!important}}
