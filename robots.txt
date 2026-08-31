@@ -1,4 +1,4 @@
-# MeetMind AI — discovery policy
+# LOREVI — discovery policy
 # Public marketing pages are intentionally crawlable by search engines and AI search/indexing bots.
 User-agent: *
 Allow: /
@@ -30,7 +30,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://meetmind-app.github.io/meetmind-landing/sitemap.xml
+Sitemap: https://lorevi.app/sitemap.xml
 
 User-agent: Claude-User
 Allow: /

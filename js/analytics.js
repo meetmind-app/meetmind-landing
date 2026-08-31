@@ -64,7 +64,7 @@ export function track(name,props={}){
   };
 
   if(window.MEETMIND_ANALYTICS_DEBUG){
-    console.info('[MeetMind landing]',event);
+    console.info('[LOREVI landing]',event);
   }
 
   window.dispatchEvent(
