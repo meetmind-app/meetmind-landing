@@ -16,6 +16,15 @@ function initGA(){
   window.gtag('config',GA_MEASUREMENT_ID,{send_page_view:false});
 }
 
+function initMetrika(){
+  if(window.__loreviMetrikaLoaded)return;
+  window.__loreviMetrikaLoaded=true;
+  const script=document.createElement('script');
+  script.async=true;
+  script.src='/js/metrika.js';
+  document.head.appendChild(script);
+}
+
 function getVisitor(){
   let id=localStorage.getItem('meetmind_visitor_id');
   if(!id){
@@ -76,11 +85,16 @@ export function track(name,props={}){
     window.gtag('event',name,gaParams);
   }
 
+  if(window.ym){
+    window.ym(112178290,'reachGoal',name,props);
+  }
+
   return event;
 }
 
 export function bindAnalytics(){
   initGA();
+  initMetrika();
 
   document.querySelectorAll('[data-track]').forEach(el=>
     el.addEventListener('click',()=>
