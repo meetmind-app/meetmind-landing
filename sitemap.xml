@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://lorevi.app/</loc></url>
   <url><loc>https://lorevi.app/ru/</loc></url>
   <url><loc>https://lorevi.app/de/</loc></url>
@@ -20,24 +20,25 @@
   <url><loc>https://lorevi.app/ar/</loc></url>
   <url><loc>https://lorevi.app/uz/</loc></url>
   <url><loc>https://lorevi.app/fa/</loc></url>
-  <url><loc>https://lorevi.app/ai-meeting-report/</loc></url>
-  <url><loc>https://lorevi.app/ru/ai-meeting-protocol/</loc></url>
-  <url><loc>https://lorevi.app/de/ki-meeting-protokoll/</loc></url>
-  <url><loc>https://lorevi.app/es/acta-reunion-ia/</loc></url>
-  <url><loc>https://lorevi.app/pt-br/ata-reuniao-ia/</loc></url>
-  <url><loc>https://lorevi.app/fr/compte-rendu-reunion-ia/</loc></url>
-  <url><loc>https://lorevi.app/it/verbale-riunione-ai/</loc></url>
-  <url><loc>https://lorevi.app/tr/yapay-zeka-toplanti-ozeti/</loc></url>
-  <url><loc>https://lorevi.app/id/notulen-rapat-ai/</loc></url>
-  <url><loc>https://lorevi.app/vi/bien-ban-cuoc-hop-ai/</loc></url>
-  <url><loc>https://lorevi.app/ms/minit-mesyuarat-ai/</loc></url>
-  <url><loc>https://lorevi.app/fil/minutes-of-meeting-ai/</loc></url>
-  <url><loc>https://lorevi.app/pl/protokol-ze-spotkania-ai/</loc></url>
-  <url><loc>https://lorevi.app/ro/proces-verbal-sedinta-ai/</loc></url>
-  <url><loc>https://lorevi.app/nl/ai-vergadernotulen/</loc></url>
-  <url><loc>https://lorevi.app/hi/ai-meeting-minutes/</loc></url>
-  <url><loc>https://lorevi.app/zh-cn/ai-meeting-minutes/</loc></url>
-  <url><loc>https://lorevi.app/ar/ai-meeting-minutes/</loc></url>
-  <url><loc>https://lorevi.app/uz/ai-uchrashuv-bayonnomasi/</loc></url>
-  <url><loc>https://lorevi.app/fa/soratjalase-ai/</loc></url>
+
+  <url><loc>https://lorevi.app/ai-meeting-report/</loc><xhtml:link rel="alternate" hreflang="en" href="https://lorevi.app/ai-meeting-report/"/><xhtml:link rel="alternate" hreflang="ru" href="https://lorevi.app/ru/ai-meeting-protocol/"/><xhtml:link rel="alternate" hreflang="de" href="https://lorevi.app/de/ki-meeting-protokoll/"/><xhtml:link rel="alternate" hreflang="es" href="https://lorevi.app/es/acta-reunion-ia/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://lorevi.app/pt-br/ata-reuniao-ia/"/><xhtml:link rel="alternate" hreflang="fr" href="https://lorevi.app/fr/compte-rendu-reunion-ia/"/><xhtml:link rel="alternate" hreflang="it" href="https://lorevi.app/it/verbale-riunione-ai/"/><xhtml:link rel="alternate" hreflang="tr" href="https://lorevi.app/tr/yapay-zeka-toplanti-ozeti/"/><xhtml:link rel="alternate" hreflang="id" href="https://lorevi.app/id/notulen-rapat-ai/"/><xhtml:link rel="alternate" hreflang="vi" href="https://lorevi.app/vi/bien-ban-cuoc-hop-ai/"/><xhtml:link rel="alternate" hreflang="ms" href="https://lorevi.app/ms/minit-mesyuarat-ai/"/><xhtml:link rel="alternate" hreflang="fil" href="https://lorevi.app/fil/minutes-of-meeting-ai/"/><xhtml:link rel="alternate" hreflang="pl" href="https://lorevi.app/pl/protokol-ze-spotkania-ai/"/><xhtml:link rel="alternate" hreflang="ro" href="https://lorevi.app/ro/proces-verbal-sedinta-ai/"/><xhtml:link rel="alternate" hreflang="nl" href="https://lorevi.app/nl/ai-vergadernotulen/"/><xhtml:link rel="alternate" hreflang="hi" href="https://lorevi.app/hi/ai-meeting-minutes/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://lorevi.app/zh-cn/ai-meeting-minutes/"/><xhtml:link rel="alternate" hreflang="ar" href="https://lorevi.app/ar/ai-meeting-minutes/"/><xhtml:link rel="alternate" hreflang="uz" href="https://lorevi.app/uz/ai-uchrashuv-bayonnomasi/"/><xhtml:link rel="alternate" hreflang="fa" href="https://lorevi.app/fa/soratjalase-ai/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://lorevi.app/ai-meeting-report/"/></url>
+  <url><loc>https://lorevi.app/ru/ai-meeting-protocol/</loc><xhtml:link rel="alternate" hreflang="ru" href="https://lorevi.app/ru/ai-meeting-protocol/"/></url>
+  <url><loc>https://lorevi.app/de/ki-meeting-protokoll/</loc><xhtml:link rel="alternate" hreflang="de" href="https://lorevi.app/de/ki-meeting-protokoll/"/></url>
+  <url><loc>https://lorevi.app/es/acta-reunion-ia/</loc><xhtml:link rel="alternate" hreflang="es" href="https://lorevi.app/es/acta-reunion-ia/"/></url>
+  <url><loc>https://lorevi.app/pt-br/ata-reuniao-ia/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://lorevi.app/pt-br/ata-reuniao-ia/"/></url>
+  <url><loc>https://lorevi.app/fr/compte-rendu-reunion-ia/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://lorevi.app/fr/compte-rendu-reunion-ia/"/></url>
+  <url><loc>https://lorevi.app/it/verbale-riunione-ai/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lorevi.app/it/verbale-riunione-ai/"/></url>
+  <url><loc>https://lorevi.app/tr/yapay-zeka-toplanti-ozeti/</loc><xhtml:link rel="alternate" hreflang="tr" href="https://lorevi.app/tr/yapay-zeka-toplanti-ozeti/"/></url>
+  <url><loc>https://lorevi.app/id/notulen-rapat-ai/</loc><xhtml:link rel="alternate" hreflang="id" href="https://lorevi.app/id/notulen-rapat-ai/"/></url>
+  <url><loc>https://lorevi.app/vi/bien-ban-cuoc-hop-ai/</loc><xhtml:link rel="alternate" hreflang="vi" href="https://lorevi.app/vi/bien-ban-cuoc-hop-ai/"/></url>
+  <url><loc>https://lorevi.app/ms/minit-mesyuarat-ai/</loc><xhtml:link rel="alternate" hreflang="ms" href="https://lorevi.app/ms/minit-mesyuarat-ai/"/></url>
+  <url><loc>https://lorevi.app/fil/minutes-of-meeting-ai/</loc><xhtml:link rel="alternate" hreflang="fil" href="https://lorevi.app/fil/minutes-of-meeting-ai/"/></url>
+  <url><loc>https://lorevi.app/pl/protokol-ze-spotkania-ai/</loc><xhtml:link rel="alternate" hreflang="pl" href="https://lorevi.app/pl/protokol-ze-spotkania-ai/"/></url>
+  <url><loc>https://lorevi.app/ro/proces-verbal-sedinta-ai/</loc><xhtml:link rel="alternate" hreflang="ro" href="https://lorevi.app/ro/proces-verbal-sedinta-ai/"/></url>
+  <url><loc>https://lorevi.app/nl/ai-vergadernotulen/</loc><xhtml:link rel="alternate" hreflang="nl" href="https://lorevi.app/nl/ai-vergadernotulen/"/></url>
+  <url><loc>https://lorevi.app/hi/ai-meeting-minutes/</loc><xhtml:link rel="alternate" hreflang="hi" href="https://lorevi.app/hi/ai-meeting-minutes/"/></url>
+  <url><loc>https://lorevi.app/zh-cn/ai-meeting-minutes/</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://lorevi.app/zh-cn/ai-meeting-minutes/"/></url>
+  <url><loc>https://lorevi.app/ar/ai-meeting-minutes/</loc><xhtml:link rel="alternate" hreflang="ar" href="https://lorevi.app/ar/ai-meeting-minutes/"/></url>
+  <url><loc>https://lorevi.app/uz/ai-uchrashuv-bayonnomasi/</loc><xhtml:link rel="alternate" hreflang="uz" href="https://lorevi.app/uz/ai-uchrashuv-bayonnomasi/"/></url>
+  <url><loc>https://lorevi.app/fa/soratjalase-ai/</loc><xhtml:link rel="alternate" hreflang="fa" href="https://lorevi.app/fa/soratjalase-ai/"/></url>
 </urlset>
