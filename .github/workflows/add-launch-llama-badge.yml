@@ -1,0 +1,39 @@
+name: Add Launch Llama badge
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-launch-llama-badge.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add badge to English homepage only
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+          marker = 'https://tools.launchllama.co?utm_source=badge&utm_medium=referral'
+          if marker in s:
+              print('Badge already present; no change needed.')
+              raise SystemExit(0)
+          badge = '''\n<div class="launch-llama-badge" style="display:flex;justify-content:center;padding:18px 16px 24px;background:#fff;">\n  <a href="https://tools.launchllama.co?utm_source=badge&utm_medium=referral" target="_blank" rel="nofollow noopener noreferrer" aria-label="As seen on Launch Llama Newsletter">\n    <img src="https://tools.launchllama.co/featured-badge-white.png?v=2" alt="As seen on Launch Llama Newsletter" width="200" height="50" loading="lazy" style="display:block;max-width:200px;width:100%;height:auto;">\n  </a>\n</div>\n'''
+          if '</body>' not in s:
+              raise SystemExit('Could not find </body> in index.html')
+          s = s.replace('</body>', badge + '</body>', 1)
+          p.write_text(s)
+          PY
+      - name: Commit migration
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Add Launch Llama badge to English homepage"
+          git push
