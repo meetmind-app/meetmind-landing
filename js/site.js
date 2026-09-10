@@ -12,6 +12,23 @@ function initProductImages(){
   });
 }
 
+function initHeroLabels(){
+  const style=document.createElement('style');
+  style.textContent=`
+    .hero-stage .floating-tag{z-index:8!important;background:#fff!important;color:#172033!important;border:2px solid rgba(109,74,255,.32)!important;box-shadow:0 10px 28px rgba(15,23,42,.18)!important;font-size:13px!important;font-weight:900!important;padding:10px 14px!important;letter-spacing:-.01em}
+    .hero-stage .tag-web{border-color:rgba(37,99,235,.35)!important}
+    .hero-stage .tag-tg{border-color:rgba(22,163,106,.42)!important}
+    .hero-stage .tag-pdf{border-color:rgba(109,74,255,.42)!important}
+    @media(max-width:760px){
+      .hero-stage .floating-tag{display:block!important;font-size:11px!important;padding:7px 10px!important;white-space:nowrap!important}
+      .hero-stage .tag-web{inset-inline-end:1%!important;inset-block-start:1%!important}
+      .hero-stage .tag-tg{inset-inline-start:1%!important;inset-block-end:35%!important}
+      .hero-stage .tag-pdf{inset-inline-start:29%!important;inset-block-end:28%!important}
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 function initKeyboardNavigation(){
   const onKey=e=>{if(e.key==='Tab')document.body.classList.add('keyboard-nav')};
   const onPointer=()=>document.body.classList.remove('keyboard-nav');
@@ -104,10 +121,8 @@ function initUseCases(){
   const tabs=[...document.querySelectorAll('[data-usecase-tab]')];
   const panel=document.querySelector('[data-usecase-panel]');
   if(!tabs.length||!panel)return;
-
   let index=Math.max(0,tabs.findIndex(t=>t.getAttribute('aria-selected')==='true'));
   let timer=null;
-
   const select=(tab,source='auto')=>{
     tabs.forEach(t=>t.setAttribute('aria-selected','false'));
     tab.setAttribute('aria-selected','true');
@@ -118,46 +133,57 @@ function initUseCases(){
     index=tabs.indexOf(tab);
     if(source==='manual')track('usecase_selected',{usecase:tab.dataset.key});
   };
-
   const stop=()=>{if(timer){clearInterval(timer);timer=null}};
   const start=()=>{
     stop();
     if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    timer=setInterval(()=>{
-      index=(index+1)%tabs.length;
-      select(tabs[index],'auto');
-    },3000);
+    timer=setInterval(()=>{index=(index+1)%tabs.length;select(tabs[index],'auto')},3000);
   };
-
-  tabs.forEach(tab=>tab.addEventListener('click',()=>{
-    select(tab,'manual');
-    start();
-  }));
-
+  tabs.forEach(tab=>tab.addEventListener('click',()=>{select(tab,'manual');start()}));
   const area=panel.closest('.usecase-layout')||panel.parentElement;
   area?.addEventListener('mouseenter',stop);
   area?.addEventListener('mouseleave',start);
   area?.addEventListener('focusin',stop);
-  area?.addEventListener('focusout',e=>{
-    if(!area.contains(e.relatedTarget))start();
-  });
-
+  area?.addEventListener('focusout',e=>{if(!area.contains(e.relatedTarget))start()});
   document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
   start();
 }
 
 function initVideo(){
-  const video=document.querySelector('[data-product-video]');
-  if(!video)return;
-  const source=video.querySelector('source');
-  if(!source?.getAttribute('src'))return;
-  video.load();
+  const frame=document.querySelector('.demo-frame');
+  if(!frame)return;
+  const oldImg=frame.querySelector('img');
+  const oldPlay=frame.querySelector('.demo-play');
+  const badge=frame.querySelector('.demo-badge');
+  const video=document.createElement('video');
+  video.setAttribute('playsinline','');
+  video.setAttribute('muted','');
+  video.muted=true;
+  video.controls=true;
+  video.preload='auto';
+  video.poster='assets/poster/product-demo-poster-light.webp';
+  video.dataset.productVideo='';
+  const source=document.createElement('source');
+  source.src='assets/video/lorevi-demo.mp4';
+  source.type='video/mp4';
+  video.appendChild(source);
+  oldImg?.replaceWith(video);
+  oldPlay?.remove();
+  if(badge)badge.textContent='Product demo · 24 sec';
+  const tryPlay=()=>{
+    const p=video.play();
+    if(p?.catch)p.catch(()=>{});
+  };
+  video.addEventListener('canplay',tryPlay,{once:true});
+  video.addEventListener('loadeddata',tryPlay,{once:true});
   video.addEventListener('error',()=>track('video_error'));
-  video.addEventListener('play',()=>track('video_play'));
+  video.addEventListener('play',()=>track('video_play'),{once:true});
+  video.load();
 }
 
 captureAttribution();
 initProductImages();
+initHeroLabels();
 initKeyboardNavigation();
 initTelegram();
 initHeader();
