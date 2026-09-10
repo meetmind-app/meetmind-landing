@@ -1,5 +1,16 @@
 import {captureAttribution,track,bindAnalytics} from './analytics.js';
 const TELEGRAM='https://t.me/meetmind_app_bot';
+const TELEGRAM_REPORT_FALLBACK='https://raw.githubusercontent.com/meetmind-app/meetmind-landing/853e3e0481c56c726a094360b9c64e728ccb0dbd/assets/product/9A103CB6-3894-42B3-A2A0-2BA4E09415FC.png';
+
+function initProductImages(){
+  document.querySelectorAll('img').forEach(img=>{
+    const src=img.getAttribute('src')||'';
+    if(src.includes('assets/product/telegram-report.webp')){
+      img.src=TELEGRAM_REPORT_FALLBACK;
+      img.addEventListener('error',()=>track('product_image_error',{asset:'telegram-report'}),{once:true});
+    }
+  });
+}
 
 function initKeyboardNavigation(){
   const onKey=e=>{if(e.key==='Tab')document.body.classList.add('keyboard-nav')};
@@ -146,6 +157,7 @@ function initVideo(){
 }
 
 captureAttribution();
+initProductImages();
 initKeyboardNavigation();
 initTelegram();
 initHeader();
